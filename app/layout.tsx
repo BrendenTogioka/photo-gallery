@@ -14,7 +14,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <header></header>
-        <main className="text-red-500">{children}</main>
+        <main className="">{children}</main>
         <footer></footer>
       </body>
     </html>
