@@ -1,7 +1,12 @@
 import Header from "../components/header";
 import Footer from "../components/footer";
-import CategoryMenu from "../components/CategoryMenu";
+import { Expletus_Sans } from "next/font/google";
 import "./globals.css";
+
+const expletusSans = Expletus_Sans({
+  variable: "--expletusSans-font",
+  subsets: ["latin"],
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -14,12 +19,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${expletusSans.variable}`}>
       <body>
-        <div className="flex flex-col h-full bg-[url('/photography-bg.jpeg')] bg-top bg-cover">
+        <div className="h-full bg-[url('/photography-bg.jpeg')] bg-top bg-cover overflow-auto">
           <Header />
           {/* <CategoryMenu /> */}
-          <main className="grow">{children}</main>
+          <main className="pt-[110px]">{children}</main>
           <Footer />
         </div>
       </body>
