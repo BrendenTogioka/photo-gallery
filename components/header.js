@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="fixed top-0 w-full z-10 flex justify-between items-center h-[90px] px-10">
+    <header className="fixed top-0 w-full z-30 flex justify-between items-center h-[90px] px-10">
       <span className="text-lg uppercase font-medium">
         Photography Portfolio
       </span>
