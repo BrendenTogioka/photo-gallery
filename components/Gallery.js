@@ -21,7 +21,7 @@ export default function Gallery({ photos }) {
         {photos.map((photo, idx) => (
           <Image
             key={photo.id}
-            src={photo.urls.full}
+            src={photo.urls.regular}
             alt={`${photo.alt_description}` | photo.id}
             width={photo.width}
             height={photo.height}
@@ -48,7 +48,7 @@ export default function Gallery({ photos }) {
         }))}
         download={false}
         licenseKey={process.env.lightboxKey}
-      />{" "}
+      />
     </>
   );
 }

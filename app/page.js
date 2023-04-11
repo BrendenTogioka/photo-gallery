@@ -12,7 +12,8 @@ const tabs = [
 
 async function getOceans() {
   const res = await fetch(
-    `https://api.unsplash.com/search/photos?query=oceans&per_page=10&client_id=${process.env.unsplashKey}`
+    `https://api.unsplash.com/search/photos?query=oceans&per_page=10&client_id=${process.env.unsplashKey}`,
+    { next: { revalidate: 100000 } }
   );
 
   if (!res.ok) {
@@ -24,7 +25,8 @@ async function getOceans() {
 
 async function getMountains() {
   const res = await fetch(
-    `https://api.unsplash.com/search/photos?query=mountains&per_page=10&client_id=${process.env.unsplashKey}`
+    `https://api.unsplash.com/search/photos?query=mountains&per_page=10&client_id=${process.env.unsplashKey}`,
+    { next: { revalidate: 100000 } }
   );
 
   if (!res.ok) {
