@@ -1,3 +1,6 @@
+import Header from "../components/header";
+import Footer from "../components/footer";
+import CategoryMenu from "../components/CategoryMenu";
 import "./globals.css";
 
 export const metadata = {
@@ -13,9 +16,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <header></header>
-        <main className="">{children}</main>
-        <footer></footer>
+        <div className="flex flex-col h-full bg-[url('/photography-bg.jpeg')] bg-top bg-cover">
+          <Header />
+          {/* <CategoryMenu /> */}
+          <main className="grow">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );
